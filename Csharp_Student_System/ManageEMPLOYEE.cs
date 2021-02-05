@@ -27,7 +27,7 @@ namespace Csharp_Student_System
 			if (textBoxIDno.Text == "ID No.")
 			{
 				textBoxIDno.Text = "";
-				textBoxIDno.ForeColor = Color.White;
+				textBoxIDno.ForeColor = Color.Black;
 			}
 		}
 
@@ -45,7 +45,7 @@ namespace Csharp_Student_System
 			if (textBoxFname.Text == "First Name")
 			{
 				textBoxFname.Text = "";
-				textBoxFname.ForeColor = Color.White;
+				textBoxFname.ForeColor = Color.Black;
 			}
 		}
 
@@ -63,7 +63,7 @@ namespace Csharp_Student_System
 			if (textBoxMname.Text == "Middle Initial")
 			{
 				textBoxMname.Text = "";
-				textBoxMname.ForeColor = Color.White;
+				textBoxMname.ForeColor = Color.Black;
 			}
 		}
 
@@ -81,7 +81,7 @@ namespace Csharp_Student_System
 			if (textBoxLname.Text == "Last Name")
 			{
 				textBoxLname.Text = "";
-				textBoxLname.ForeColor = Color.White;
+				textBoxLname.ForeColor = Color.Black;
 			}
 		}
 
@@ -99,7 +99,7 @@ namespace Csharp_Student_System
 			if (textBoxDesignation.Text == "Designation")
 			{
 				textBoxDesignation.Text = "";
-				textBoxDesignation.ForeColor = Color.White;
+				textBoxDesignation.ForeColor = Color.Black;
 			}
 		}
 
@@ -117,7 +117,7 @@ namespace Csharp_Student_System
 			if (textBoxContactPerson.Text == "Contact Person")
 			{
 				textBoxContactPerson.Text = "";
-				textBoxContactPerson.ForeColor = Color.White;
+				textBoxContactPerson.ForeColor = Color.Black;
 			}
 		}
 
@@ -135,7 +135,7 @@ namespace Csharp_Student_System
 			if (textBoxContactNumber.Text == "Contact Number")
 			{
 				textBoxContactNumber.Text = "";
-				textBoxContactNumber.ForeColor = Color.White;
+				textBoxContactNumber.ForeColor = Color.Black;
 			}
 		}
 
@@ -153,7 +153,7 @@ namespace Csharp_Student_System
 			if (textBoxAddress.Text == "Address")
 			{
 				textBoxAddress.Text = "";
-				textBoxAddress.ForeColor = Color.White;
+				textBoxAddress.ForeColor = Color.Black;
 			}
 		}
 
@@ -171,7 +171,7 @@ namespace Csharp_Student_System
 			if (textBoxTIN.Text == "TIN")
 			{
 				textBoxTIN.Text = "";
-				textBoxTIN.ForeColor = Color.White;
+				textBoxTIN.ForeColor = Color.Black;
 			}
 		}
 
@@ -189,7 +189,7 @@ namespace Csharp_Student_System
 			if (textBoxSSS.Text == "SSS")
 			{
 				textBoxSSS.Text = "";
-				textBoxSSS.ForeColor = Color.White;
+				textBoxSSS.ForeColor = Color.Black;
 			}
 		}
 
@@ -207,7 +207,7 @@ namespace Csharp_Student_System
 			if (textBoxPHIL.Text == "PHIL")
 			{
 				textBoxPHIL.Text = "";
-				textBoxPHIL.ForeColor = Color.White;
+				textBoxPHIL.ForeColor = Color.Black;
 			}
 		}
 
@@ -225,7 +225,7 @@ namespace Csharp_Student_System
 			if (SearchBox.Text == "Search")
 			{
 				SearchBox.Text = "";
-				SearchBox.ForeColor = Color.White;
+				SearchBox.ForeColor = Color.Black;
 			}
 		}
 
@@ -566,17 +566,17 @@ namespace Csharp_Student_System
 			pictureBoxStudentImage.Image = pictureBoxSpam.Image;
 			pictureBoxQRcode.Image = null;
 
-			textBoxIDno.ForeColor = Color.White;
-			textBoxFname.ForeColor = Color.White;
-			textBoxMname.ForeColor = Color.White;
-			textBoxLname.ForeColor = Color.White;
-			textBoxDesignation.ForeColor = Color.White;
-			textBoxContactPerson.ForeColor = Color.White;
-			textBoxContactNumber.ForeColor = Color.White;
-			textBoxAddress.ForeColor = Color.White;
-			textBoxTIN.ForeColor = Color.White;
-			textBoxSSS.ForeColor = Color.White;
-			textBoxPHIL.ForeColor = Color.White;
+			textBoxIDno.ForeColor = Color.Black;
+			textBoxFname.ForeColor = Color.Black;
+			textBoxMname.ForeColor = Color.Black;
+			textBoxLname.ForeColor = Color.Black;
+			textBoxDesignation.ForeColor = Color.Black;
+			textBoxContactPerson.ForeColor = Color.Black;
+			textBoxContactNumber.ForeColor = Color.Black;
+			textBoxAddress.ForeColor = Color.Black;
+			textBoxTIN.ForeColor = Color.Black;
+			textBoxSSS.ForeColor = Color.Black;
+			textBoxPHIL.ForeColor = Color.Black;
 
 		}
 	}

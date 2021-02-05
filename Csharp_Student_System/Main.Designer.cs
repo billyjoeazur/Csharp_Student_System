@@ -569,7 +569,7 @@
 			// 
 			// panelChildForm
 			// 
-			this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
+			this.panelChildForm.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panelChildForm.Location = new System.Drawing.Point(132, 0);
 			this.panelChildForm.Name = "panelChildForm";

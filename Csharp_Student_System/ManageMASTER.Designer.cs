@@ -247,6 +247,7 @@
 			this.tableLayoutMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			this.tableLayoutMain.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.tableLayoutMain.ColumnCount = 4;
 			this.tableLayoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.01F));
 			this.tableLayoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
@@ -371,7 +372,7 @@
 			// buttonUpload
 			// 
 			this.buttonUpload.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-			this.buttonUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+			this.buttonUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
 			this.buttonUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonUpload.BorderRadius = 0;
 			this.buttonUpload.ButtonText = "Upload";
@@ -433,14 +434,16 @@
 			// 
 			// textBoxAddress
 			// 
+			this.textBoxAddress.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxAddress.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxAddress.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxAddress.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxAddress.BorderThickness = 1;
 			this.textBoxAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxAddress.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxAddress.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxAddress.ForeColor = System.Drawing.Color.White;
+			this.textBoxAddress.ForeColor = System.Drawing.Color.Black;
 			this.textBoxAddress.isPassword = false;
 			this.textBoxAddress.Location = new System.Drawing.Point(5, 5);
 			this.textBoxAddress.Margin = new System.Windows.Forms.Padding(5);
@@ -483,14 +486,16 @@
 			// 
 			// textBoxContact
 			// 
+			this.textBoxContact.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxContact.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxContact.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxContact.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxContact.BorderThickness = 1;
 			this.textBoxContact.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxContact.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxContact.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxContact.ForeColor = System.Drawing.Color.White;
+			this.textBoxContact.ForeColor = System.Drawing.Color.Black;
 			this.textBoxContact.isPassword = false;
 			this.textBoxContact.Location = new System.Drawing.Point(267, 87);
 			this.textBoxContact.Margin = new System.Windows.Forms.Padding(5);
@@ -505,14 +510,16 @@
 			// 
 			// textBoxFname
 			// 
+			this.textBoxFname.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxFname.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxFname.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxFname.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxFname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxFname.BorderThickness = 1;
 			this.textBoxFname.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxFname.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxFname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxFname.ForeColor = System.Drawing.Color.White;
+			this.textBoxFname.ForeColor = System.Drawing.Color.Black;
 			this.textBoxFname.isPassword = false;
 			this.textBoxFname.Location = new System.Drawing.Point(5, 46);
 			this.textBoxFname.Margin = new System.Windows.Forms.Padding(5);
@@ -527,14 +534,16 @@
 			// 
 			// textBoxMname
 			// 
+			this.textBoxMname.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxMname.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxMname.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxMname.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxMname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxMname.BorderThickness = 1;
 			this.textBoxMname.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxMname.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxMname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxMname.ForeColor = System.Drawing.Color.White;
+			this.textBoxMname.ForeColor = System.Drawing.Color.Black;
 			this.textBoxMname.isPassword = false;
 			this.textBoxMname.Location = new System.Drawing.Point(5, 87);
 			this.textBoxMname.Margin = new System.Windows.Forms.Padding(5);
@@ -549,14 +558,16 @@
 			// 
 			// textBoxLname
 			// 
+			this.textBoxLname.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxLname.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxLname.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxLname.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxLname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxLname.BorderThickness = 1;
 			this.textBoxLname.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxLname.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxLname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxLname.ForeColor = System.Drawing.Color.White;
+			this.textBoxLname.ForeColor = System.Drawing.Color.Black;
 			this.textBoxLname.isPassword = false;
 			this.textBoxLname.Location = new System.Drawing.Point(136, 5);
 			this.textBoxLname.Margin = new System.Windows.Forms.Padding(5);
@@ -588,8 +599,9 @@
 			this.radioButtonFemale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.radioButtonFemale.AutoSize = true;
+			this.radioButtonFemale.BackColor = System.Drawing.Color.LightGray;
 			this.radioButtonFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.radioButtonFemale.ForeColor = System.Drawing.Color.White;
+			this.radioButtonFemale.ForeColor = System.Drawing.Color.Black;
 			this.radioButtonFemale.Location = new System.Drawing.Point(49, 8);
 			this.radioButtonFemale.Margin = new System.Windows.Forms.Padding(4);
 			this.radioButtonFemale.Name = "radioButtonFemale";
@@ -597,16 +609,17 @@
 			this.radioButtonFemale.TabIndex = 1;
 			this.radioButtonFemale.TabStop = true;
 			this.radioButtonFemale.Text = "Female";
-			this.radioButtonFemale.UseVisualStyleBackColor = true;
+			this.radioButtonFemale.UseVisualStyleBackColor = false;
 			// 
 			// radioButtonMale
 			// 
 			this.radioButtonMale.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
 			this.radioButtonMale.AutoSize = true;
+			this.radioButtonMale.BackColor = System.Drawing.Color.LightGray;
 			this.radioButtonMale.Checked = true;
 			this.radioButtonMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.radioButtonMale.ForeColor = System.Drawing.Color.White;
+			this.radioButtonMale.ForeColor = System.Drawing.Color.Black;
 			this.radioButtonMale.Location = new System.Drawing.Point(1, 8);
 			this.radioButtonMale.Margin = new System.Windows.Forms.Padding(4);
 			this.radioButtonMale.Name = "radioButtonMale";
@@ -614,15 +627,15 @@
 			this.radioButtonMale.TabIndex = 0;
 			this.radioButtonMale.TabStop = true;
 			this.radioButtonMale.Text = "Male";
-			this.radioButtonMale.UseVisualStyleBackColor = true;
+			this.radioButtonMale.UseVisualStyleBackColor = false;
 			// 
 			// comboBoxCourse
 			// 
-			this.comboBoxCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+			this.comboBoxCourse.BackColor = System.Drawing.Color.LightGray;
 			this.comboBoxCourse.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.comboBoxCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.comboBoxCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBoxCourse.ForeColor = System.Drawing.Color.White;
+			this.comboBoxCourse.ForeColor = System.Drawing.Color.Black;
 			this.comboBoxCourse.FormattingEnabled = true;
 			this.comboBoxCourse.Location = new System.Drawing.Point(135, 86);
 			this.comboBoxCourse.Margin = new System.Windows.Forms.Padding(4);
@@ -633,11 +646,11 @@
 			// 
 			// comboBoxSY
 			// 
-			this.comboBoxSY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+			this.comboBoxSY.BackColor = System.Drawing.Color.LightGray;
 			this.comboBoxSY.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.comboBoxSY.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.comboBoxSY.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboBoxSY.ForeColor = System.Drawing.Color.White;
+			this.comboBoxSY.ForeColor = System.Drawing.Color.Black;
 			this.comboBoxSY.FormattingEnabled = true;
 			this.comboBoxSY.Location = new System.Drawing.Point(266, 4);
 			this.comboBoxSY.Margin = new System.Windows.Forms.Padding(4);
@@ -648,14 +661,16 @@
 			// 
 			// textBoxGuardian
 			// 
+			this.textBoxGuardian.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxGuardian.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxGuardian.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxGuardian.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxGuardian.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxGuardian.BorderThickness = 1;
 			this.textBoxGuardian.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxGuardian.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxGuardian.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxGuardian.ForeColor = System.Drawing.Color.White;
+			this.textBoxGuardian.ForeColor = System.Drawing.Color.Black;
 			this.textBoxGuardian.isPassword = false;
 			this.textBoxGuardian.Location = new System.Drawing.Point(267, 46);
 			this.textBoxGuardian.Margin = new System.Windows.Forms.Padding(5);
@@ -685,12 +700,12 @@
 			// 
 			// generateBtn
 			// 
-			this.generateBtn.BackColor = System.Drawing.Color.White;
+			this.generateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
 			this.generateBtn.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.generateBtn.FlatAppearance.BorderSize = 0;
 			this.generateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.generateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.generateBtn.ForeColor = System.Drawing.Color.Black;
+			this.generateBtn.ForeColor = System.Drawing.Color.White;
 			this.generateBtn.Location = new System.Drawing.Point(65, 3);
 			this.generateBtn.Name = "generateBtn";
 			this.generateBtn.Size = new System.Drawing.Size(57, 29);
@@ -701,14 +716,16 @@
 			// 
 			// textBoxIDno
 			// 
+			this.textBoxIDno.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxIDno.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxIDno.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxIDno.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxIDno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxIDno.BorderThickness = 1;
 			this.textBoxIDno.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxIDno.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxIDno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxIDno.ForeColor = System.Drawing.Color.Transparent;
+			this.textBoxIDno.ForeColor = System.Drawing.Color.Black;
 			this.textBoxIDno.isPassword = false;
 			this.textBoxIDno.Location = new System.Drawing.Point(5, 5);
 			this.textBoxIDno.Margin = new System.Windows.Forms.Padding(5);

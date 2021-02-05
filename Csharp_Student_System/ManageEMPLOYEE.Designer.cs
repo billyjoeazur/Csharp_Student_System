@@ -30,7 +30,10 @@
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageEMPLOYEE));
 			this.panelHeader = new System.Windows.Forms.Panel();
+			this.pictureBoxSpam = new System.Windows.Forms.PictureBox();
 			this.button1 = new System.Windows.Forms.Button();
+			this.pictureBoxQRcode = new System.Windows.Forms.PictureBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.tableLayoutPanelWithSearchBar = new System.Windows.Forms.TableLayoutPanel();
 			this.SearchBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -43,6 +46,8 @@
 			this.buttonReset = new System.Windows.Forms.Button();
 			this.buttonAddStudent = new System.Windows.Forms.Button();
 			this.tableLayout2Cells = new System.Windows.Forms.TableLayoutPanel();
+			this.buttonUpload = new Bunifu.Framework.UI.BunifuFlatButton();
+			this.pictureBoxStudentImage = new System.Windows.Forms.PictureBox();
 			this.tableLayout1Cell = new System.Windows.Forms.TableLayoutPanel();
 			this.textBoxPHIL = new Bunifu.Framework.UI.BunifuMetroTextbox();
 			this.textBoxTIN = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -61,25 +66,20 @@
 			this.textBoxContactPerson = new Bunifu.Framework.UI.BunifuMetroTextbox();
 			this.tableLayoutPanelWithDatagGridView = new System.Windows.Forms.TableLayoutPanel();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.buttonUpload = new Bunifu.Framework.UI.BunifuFlatButton();
-			this.pictureBoxStudentImage = new System.Windows.Forms.PictureBox();
-			this.pictureBoxSpam = new System.Windows.Forms.PictureBox();
-			this.pictureBoxQRcode = new System.Windows.Forms.PictureBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panelHeader.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpam)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRcode)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.tableLayoutPanelWithSearchBar.SuspendLayout();
 			this.tableLayoutMain.SuspendLayout();
 			this.tableLayout4Cells.SuspendLayout();
 			this.tableLayout2Cells.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentImage)).BeginInit();
 			this.tableLayout1Cell.SuspendLayout();
 			this.tableLayout6Cells.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.tableLayoutPanelWithDatagGridView.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentImage)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpam)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRcode)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panelHeader
@@ -97,6 +97,17 @@
 			this.panelHeader.Size = new System.Drawing.Size(814, 50);
 			this.panelHeader.TabIndex = 4;
 			// 
+			// pictureBoxSpam
+			// 
+			this.pictureBoxSpam.Image = global::Csharp_Student_System.Properties.Resources.username;
+			this.pictureBoxSpam.Location = new System.Drawing.Point(76, 12);
+			this.pictureBoxSpam.Name = "pictureBoxSpam";
+			this.pictureBoxSpam.Size = new System.Drawing.Size(34, 34);
+			this.pictureBoxSpam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBoxSpam.TabIndex = 11;
+			this.pictureBoxSpam.TabStop = false;
+			this.pictureBoxSpam.Visible = false;
+			// 
 			// button1
 			// 
 			this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -107,6 +118,29 @@
 			this.button1.Text = "Upload QRcode";
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// pictureBoxQRcode
+			// 
+			this.pictureBoxQRcode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureBoxQRcode.Location = new System.Drawing.Point(619, 0);
+			this.pictureBoxQRcode.Name = "pictureBoxQRcode";
+			this.pictureBoxQRcode.Size = new System.Drawing.Size(54, 50);
+			this.pictureBoxQRcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBoxQRcode.TabIndex = 9;
+			this.pictureBoxQRcode.TabStop = false;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.pictureBox1.Image = global::Csharp_Student_System.Properties.Resources.back;
+			this.pictureBox1.Location = new System.Drawing.Point(3, 10);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(37, 37);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 1;
+			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// label1
 			// 
@@ -197,6 +231,7 @@
 			// 
 			// tableLayoutMain
 			// 
+			this.tableLayoutMain.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.tableLayoutMain.ColumnCount = 4;
 			this.tableLayoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.01F));
 			this.tableLayoutMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
@@ -319,6 +354,55 @@
 			this.tableLayout2Cells.Size = new System.Drawing.Size(127, 124);
 			this.tableLayout2Cells.TabIndex = 1;
 			// 
+			// buttonUpload
+			// 
+			this.buttonUpload.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
+			this.buttonUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
+			this.buttonUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonUpload.BorderRadius = 0;
+			this.buttonUpload.ButtonText = "Upload";
+			this.buttonUpload.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.buttonUpload.DisabledColor = System.Drawing.Color.Gray;
+			this.buttonUpload.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.buttonUpload.Iconcolor = System.Drawing.Color.Transparent;
+			this.buttonUpload.Iconimage = ((System.Drawing.Image)(resources.GetObject("buttonUpload.Iconimage")));
+			this.buttonUpload.Iconimage_right = null;
+			this.buttonUpload.Iconimage_right_Selected = null;
+			this.buttonUpload.Iconimage_Selected = null;
+			this.buttonUpload.IconMarginLeft = 0;
+			this.buttonUpload.IconMarginRight = 0;
+			this.buttonUpload.IconRightVisible = true;
+			this.buttonUpload.IconRightZoom = 0D;
+			this.buttonUpload.IconVisible = true;
+			this.buttonUpload.IconZoom = 90D;
+			this.buttonUpload.IsTab = false;
+			this.buttonUpload.Location = new System.Drawing.Point(5, 98);
+			this.buttonUpload.Margin = new System.Windows.Forms.Padding(5);
+			this.buttonUpload.Name = "buttonUpload";
+			this.buttonUpload.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+			this.buttonUpload.OnHovercolor = System.Drawing.Color.Blue;
+			this.buttonUpload.OnHoverTextColor = System.Drawing.Color.White;
+			this.buttonUpload.selected = false;
+			this.buttonUpload.Size = new System.Drawing.Size(117, 21);
+			this.buttonUpload.TabIndex = 75;
+			this.buttonUpload.Text = "Upload";
+			this.buttonUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.buttonUpload.Textcolor = System.Drawing.Color.White;
+			this.buttonUpload.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.buttonUpload.Click += new System.EventHandler(this.buttonUpload_Click);
+			// 
+			// pictureBoxStudentImage
+			// 
+			this.pictureBoxStudentImage.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pictureBoxStudentImage.Image = global::Csharp_Student_System.Properties.Resources.username;
+			this.pictureBoxStudentImage.Location = new System.Drawing.Point(4, 4);
+			this.pictureBoxStudentImage.Margin = new System.Windows.Forms.Padding(4);
+			this.pictureBoxStudentImage.Name = "pictureBoxStudentImage";
+			this.pictureBoxStudentImage.Size = new System.Drawing.Size(119, 85);
+			this.pictureBoxStudentImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBoxStudentImage.TabIndex = 74;
+			this.pictureBoxStudentImage.TabStop = false;
+			// 
 			// tableLayout1Cell
 			// 
 			this.tableLayout1Cell.ColumnCount = 1;
@@ -339,14 +423,16 @@
 			// 
 			// textBoxPHIL
 			// 
+			this.textBoxPHIL.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxPHIL.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxPHIL.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxPHIL.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxPHIL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxPHIL.BorderThickness = 1;
 			this.textBoxPHIL.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxPHIL.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxPHIL.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxPHIL.ForeColor = System.Drawing.Color.White;
+			this.textBoxPHIL.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.textBoxPHIL.isPassword = false;
 			this.textBoxPHIL.Location = new System.Drawing.Point(5, 87);
 			this.textBoxPHIL.Margin = new System.Windows.Forms.Padding(5);
@@ -362,14 +448,16 @@
 			// 
 			// textBoxTIN
 			// 
+			this.textBoxTIN.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxTIN.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxTIN.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxTIN.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxTIN.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxTIN.BorderThickness = 1;
 			this.textBoxTIN.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxTIN.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxTIN.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxTIN.ForeColor = System.Drawing.Color.White;
+			this.textBoxTIN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.textBoxTIN.isPassword = false;
 			this.textBoxTIN.Location = new System.Drawing.Point(5, 5);
 			this.textBoxTIN.Margin = new System.Windows.Forms.Padding(5);
@@ -385,14 +473,16 @@
 			// 
 			// textBoxSSS
 			// 
+			this.textBoxSSS.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxSSS.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxSSS.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxSSS.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxSSS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxSSS.BorderThickness = 1;
 			this.textBoxSSS.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxSSS.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxSSS.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxSSS.ForeColor = System.Drawing.Color.White;
+			this.textBoxSSS.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.textBoxSSS.isPassword = false;
 			this.textBoxSSS.Location = new System.Drawing.Point(5, 46);
 			this.textBoxSSS.Margin = new System.Windows.Forms.Padding(5);
@@ -449,14 +539,16 @@
 			// 
 			// textBoxAddress
 			// 
+			this.textBoxAddress.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxAddress.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxAddress.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxAddress.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxAddress.BorderThickness = 1;
 			this.textBoxAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxAddress.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxAddress.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxAddress.ForeColor = System.Drawing.Color.White;
+			this.textBoxAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.textBoxAddress.isPassword = false;
 			this.textBoxAddress.Location = new System.Drawing.Point(271, 46);
 			this.textBoxAddress.Margin = new System.Windows.Forms.Padding(5);
@@ -472,14 +564,16 @@
 			// 
 			// textBoxContactNumber
 			// 
+			this.textBoxContactNumber.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxContactNumber.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxContactNumber.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxContactNumber.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxContactNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxContactNumber.BorderThickness = 1;
 			this.textBoxContactNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxContactNumber.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxContactNumber.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxContactNumber.ForeColor = System.Drawing.Color.White;
+			this.textBoxContactNumber.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.textBoxContactNumber.isPassword = false;
 			this.textBoxContactNumber.Location = new System.Drawing.Point(271, 5);
 			this.textBoxContactNumber.Margin = new System.Windows.Forms.Padding(5);
@@ -495,14 +589,16 @@
 			// 
 			// textBoxFname
 			// 
+			this.textBoxFname.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxFname.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxFname.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxFname.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxFname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxFname.BorderThickness = 1;
 			this.textBoxFname.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxFname.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxFname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxFname.ForeColor = System.Drawing.Color.White;
+			this.textBoxFname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.textBoxFname.isPassword = false;
 			this.textBoxFname.Location = new System.Drawing.Point(5, 46);
 			this.textBoxFname.Margin = new System.Windows.Forms.Padding(5);
@@ -517,14 +613,16 @@
 			// 
 			// textBoxMname
 			// 
+			this.textBoxMname.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxMname.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxMname.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxMname.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxMname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxMname.BorderThickness = 1;
 			this.textBoxMname.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxMname.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxMname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxMname.ForeColor = System.Drawing.Color.White;
+			this.textBoxMname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.textBoxMname.isPassword = false;
 			this.textBoxMname.Location = new System.Drawing.Point(5, 87);
 			this.textBoxMname.Margin = new System.Windows.Forms.Padding(5);
@@ -539,14 +637,16 @@
 			// 
 			// textBoxLname
 			// 
+			this.textBoxLname.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxLname.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxLname.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxLname.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxLname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxLname.BorderThickness = 1;
 			this.textBoxLname.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxLname.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxLname.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxLname.ForeColor = System.Drawing.Color.White;
+			this.textBoxLname.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.textBoxLname.isPassword = false;
 			this.textBoxLname.Location = new System.Drawing.Point(138, 5);
 			this.textBoxLname.Margin = new System.Windows.Forms.Padding(5);
@@ -576,12 +676,12 @@
 			// 
 			// generateBtn
 			// 
-			this.generateBtn.BackColor = System.Drawing.Color.White;
+			this.generateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
 			this.generateBtn.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.generateBtn.FlatAppearance.BorderSize = 0;
 			this.generateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.generateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.generateBtn.ForeColor = System.Drawing.Color.Black;
+			this.generateBtn.ForeColor = System.Drawing.Color.White;
 			this.generateBtn.Location = new System.Drawing.Point(66, 3);
 			this.generateBtn.Name = "generateBtn";
 			this.generateBtn.Size = new System.Drawing.Size(58, 29);
@@ -592,14 +692,16 @@
 			// 
 			// textBoxIDno
 			// 
+			this.textBoxIDno.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxIDno.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxIDno.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxIDno.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxIDno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxIDno.BorderThickness = 1;
 			this.textBoxIDno.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxIDno.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxIDno.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxIDno.ForeColor = System.Drawing.Color.Transparent;
+			this.textBoxIDno.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.textBoxIDno.isPassword = false;
 			this.textBoxIDno.Location = new System.Drawing.Point(5, 5);
 			this.textBoxIDno.Margin = new System.Windows.Forms.Padding(5);
@@ -614,14 +716,16 @@
 			// 
 			// textBoxDesignation
 			// 
+			this.textBoxDesignation.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxDesignation.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxDesignation.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxDesignation.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxDesignation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxDesignation.BorderThickness = 1;
 			this.textBoxDesignation.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxDesignation.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxDesignation.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxDesignation.ForeColor = System.Drawing.Color.White;
+			this.textBoxDesignation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.textBoxDesignation.isPassword = false;
 			this.textBoxDesignation.Location = new System.Drawing.Point(138, 46);
 			this.textBoxDesignation.Margin = new System.Windows.Forms.Padding(5);
@@ -636,14 +740,16 @@
 			// 
 			// textBoxContactPerson
 			// 
+			this.textBoxContactPerson.BackColor = System.Drawing.Color.LightGray;
 			this.textBoxContactPerson.BorderColorFocused = System.Drawing.Color.Blue;
 			this.textBoxContactPerson.BorderColorIdle = System.Drawing.SystemColors.ButtonFace;
 			this.textBoxContactPerson.BorderColorMouseHover = System.Drawing.Color.Blue;
+			this.textBoxContactPerson.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 			this.textBoxContactPerson.BorderThickness = 1;
 			this.textBoxContactPerson.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.textBoxContactPerson.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textBoxContactPerson.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-			this.textBoxContactPerson.ForeColor = System.Drawing.Color.White;
+			this.textBoxContactPerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.textBoxContactPerson.isPassword = false;
 			this.textBoxContactPerson.Location = new System.Drawing.Point(138, 87);
 			this.textBoxContactPerson.Margin = new System.Windows.Forms.Padding(5);
@@ -681,89 +787,6 @@
 			this.dataGridView1.TabIndex = 0;
 			this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
 			// 
-			// buttonUpload
-			// 
-			this.buttonUpload.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-			this.buttonUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-			this.buttonUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonUpload.BorderRadius = 0;
-			this.buttonUpload.ButtonText = "Upload";
-			this.buttonUpload.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.buttonUpload.DisabledColor = System.Drawing.Color.Gray;
-			this.buttonUpload.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.buttonUpload.Iconcolor = System.Drawing.Color.Transparent;
-			this.buttonUpload.Iconimage = ((System.Drawing.Image)(resources.GetObject("buttonUpload.Iconimage")));
-			this.buttonUpload.Iconimage_right = null;
-			this.buttonUpload.Iconimage_right_Selected = null;
-			this.buttonUpload.Iconimage_Selected = null;
-			this.buttonUpload.IconMarginLeft = 0;
-			this.buttonUpload.IconMarginRight = 0;
-			this.buttonUpload.IconRightVisible = true;
-			this.buttonUpload.IconRightZoom = 0D;
-			this.buttonUpload.IconVisible = true;
-			this.buttonUpload.IconZoom = 90D;
-			this.buttonUpload.IsTab = false;
-			this.buttonUpload.Location = new System.Drawing.Point(5, 98);
-			this.buttonUpload.Margin = new System.Windows.Forms.Padding(5);
-			this.buttonUpload.Name = "buttonUpload";
-			this.buttonUpload.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-			this.buttonUpload.OnHovercolor = System.Drawing.Color.Blue;
-			this.buttonUpload.OnHoverTextColor = System.Drawing.Color.White;
-			this.buttonUpload.selected = false;
-			this.buttonUpload.Size = new System.Drawing.Size(117, 21);
-			this.buttonUpload.TabIndex = 75;
-			this.buttonUpload.Text = "Upload";
-			this.buttonUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.buttonUpload.Textcolor = System.Drawing.Color.White;
-			this.buttonUpload.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buttonUpload.Click += new System.EventHandler(this.buttonUpload_Click);
-			// 
-			// pictureBoxStudentImage
-			// 
-			this.pictureBoxStudentImage.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pictureBoxStudentImage.Image = global::Csharp_Student_System.Properties.Resources.username;
-			this.pictureBoxStudentImage.Location = new System.Drawing.Point(4, 4);
-			this.pictureBoxStudentImage.Margin = new System.Windows.Forms.Padding(4);
-			this.pictureBoxStudentImage.Name = "pictureBoxStudentImage";
-			this.pictureBoxStudentImage.Size = new System.Drawing.Size(119, 85);
-			this.pictureBoxStudentImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBoxStudentImage.TabIndex = 74;
-			this.pictureBoxStudentImage.TabStop = false;
-			// 
-			// pictureBoxSpam
-			// 
-			this.pictureBoxSpam.Image = global::Csharp_Student_System.Properties.Resources.username;
-			this.pictureBoxSpam.Location = new System.Drawing.Point(76, 12);
-			this.pictureBoxSpam.Name = "pictureBoxSpam";
-			this.pictureBoxSpam.Size = new System.Drawing.Size(34, 34);
-			this.pictureBoxSpam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBoxSpam.TabIndex = 11;
-			this.pictureBoxSpam.TabStop = false;
-			this.pictureBoxSpam.Visible = false;
-			// 
-			// pictureBoxQRcode
-			// 
-			this.pictureBoxQRcode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pictureBoxQRcode.Location = new System.Drawing.Point(619, 0);
-			this.pictureBoxQRcode.Name = "pictureBoxQRcode";
-			this.pictureBoxQRcode.Size = new System.Drawing.Size(54, 50);
-			this.pictureBoxQRcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBoxQRcode.TabIndex = 9;
-			this.pictureBoxQRcode.TabStop = false;
-			// 
-			// pictureBox1
-			// 
-			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.pictureBox1.Image = global::Csharp_Student_System.Properties.Resources.back;
-			this.pictureBox1.Location = new System.Drawing.Point(3, 10);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(37, 37);
-			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-			this.pictureBox1.TabIndex = 1;
-			this.pictureBox1.TabStop = false;
-			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-			// 
 			// ManageEMPLOYEE
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -781,20 +804,20 @@
 			this.Load += new System.EventHandler(this.ManageEMPLOYEE_Load);
 			this.panelHeader.ResumeLayout(false);
 			this.panelHeader.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpam)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRcode)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.tableLayoutPanelWithSearchBar.ResumeLayout(false);
 			this.tableLayoutPanelWithSearchBar.PerformLayout();
 			this.tableLayoutMain.ResumeLayout(false);
 			this.tableLayout4Cells.ResumeLayout(false);
 			this.tableLayout2Cells.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentImage)).EndInit();
 			this.tableLayout1Cell.ResumeLayout(false);
 			this.tableLayout6Cells.ResumeLayout(false);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanelWithDatagGridView.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBoxStudentImage)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBoxSpam)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBoxQRcode)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
 		}

@@ -36,7 +36,7 @@ namespace Csharp_Student_System
 			if (textBoxLRN.Text == "LRN")
 			{
 				textBoxLRN.Text = "";
-				textBoxLRN.ForeColor = Color.White;
+				textBoxLRN.ForeColor = Color.Black;
 			}
 		}
 
@@ -54,7 +54,7 @@ namespace Csharp_Student_System
 			if (textBoxESC.Text == "ESC")
 			{
 				textBoxESC.Text = "";
-				textBoxESC.ForeColor = Color.White;
+				textBoxESC.ForeColor = Color.Black;
 			}
 		}
 
@@ -72,7 +72,7 @@ namespace Csharp_Student_System
 			if (textBoxFname.Text == "First Name")
 			{
 				textBoxFname.Text = "";
-				textBoxFname.ForeColor = Color.White;
+				textBoxFname.ForeColor = Color.Black;
 			}
 		}
 
@@ -90,7 +90,7 @@ namespace Csharp_Student_System
 			if (textBoxMname.Text == "Middle Initial")
 			{
 				textBoxMname.Text = "";
-				textBoxMname.ForeColor = Color.White;
+				textBoxMname.ForeColor = Color.Black;
 			}
 		}
 
@@ -108,7 +108,7 @@ namespace Csharp_Student_System
 			if (textBoxLname.Text == "Last Name")
 			{
 				textBoxLname.Text = "";
-				textBoxLname.ForeColor = Color.White;
+				textBoxLname.ForeColor = Color.Black;
 			}
 		}
 
@@ -126,7 +126,7 @@ namespace Csharp_Student_System
 			if (textBoxGuardian.Text == "Guardian")
 			{
 				textBoxGuardian.Text = "";
-				textBoxGuardian.ForeColor = Color.White;
+				textBoxGuardian.ForeColor = Color.Black;
 			}
 		}
 
@@ -144,7 +144,7 @@ namespace Csharp_Student_System
 			if (textBoxContact.Text == "Contact No.")
 			{
 				textBoxContact.Text = "";
-				textBoxContact.ForeColor = Color.White;
+				textBoxContact.ForeColor = Color.Black;
 			}
 		}
 
@@ -162,7 +162,7 @@ namespace Csharp_Student_System
 			if (textBoxAddress.Text == "Address")
 			{
 				textBoxAddress.Text = "";
-				textBoxAddress.ForeColor = Color.White;
+				textBoxAddress.ForeColor = Color.Black;
 			}
 		}
 
@@ -558,7 +558,7 @@ namespace Csharp_Student_System
 		{
 			Barcode barcode = new Barcode();
 			Color fontcolor = Color.Black;
-			Color backcolor = Color.White;
+			Color backcolor = Color.Black;
 			Image img = barcode.Encode(TYPE.CODE39, textBoxLRN.Text, fontcolor, backcolor, (int)(pictureBoxBarcode.Width * 0.7), (int)(pictureBoxBarcode.Height * .8));
 			//pictureBoxBarcode.Image = img;
 			sb.pictureBox1.Image = img;
@@ -582,14 +582,14 @@ namespace Csharp_Student_System
 			pictureBoxStudentImage.Image = pictureBoxSpam.Image;
 			pictureBoxBarcode.Image = null;
 
-			textBoxLRN.ForeColor = Color.White;
-			textBoxESC.ForeColor = Color.White;
-			textBoxFname.ForeColor = Color.White;
-			textBoxMname.ForeColor = Color.White;
-			textBoxLname.ForeColor = Color.White;
-			textBoxGuardian.ForeColor = Color.White;
-			textBoxAddress.ForeColor = Color.White;
-			textBoxContact.ForeColor = Color.White;
+			textBoxLRN.ForeColor = Color.Black;
+			textBoxESC.ForeColor = Color.Black;
+			textBoxFname.ForeColor = Color.Black;
+			textBoxMname.ForeColor = Color.Black;
+			textBoxLname.ForeColor = Color.Black;
+			textBoxGuardian.ForeColor = Color.Black;
+			textBoxAddress.ForeColor = Color.Black;
+			textBoxContact.ForeColor = Color.Black;
 		}
 	}
 }
