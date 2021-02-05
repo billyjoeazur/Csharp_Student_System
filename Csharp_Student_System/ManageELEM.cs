@@ -311,6 +311,16 @@ namespace Csharp_Student_System
 				MessageBox.Show("Student LRN Already In Used", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
+			else if (student.valJuniorHigh(lrn))
+			{
+				MessageBox.Show("Student LRN Already In Used In Junior High", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+
+			else if (student.valSeniorHigh(lrn))
+			{
+				MessageBox.Show("Student LRN Already In Used In Senior High", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+
 			else if (verif())
 			{
 				pictureBoxStudentImage.Image.Save(pic, pictureBoxStudentImage.Image.RawFormat);

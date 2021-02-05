@@ -325,6 +325,16 @@ namespace Csharp_Student_System
 				MessageBox.Show("Student ID Already In Used", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 
+			else if (student.valElementary(lrn))
+			{
+				MessageBox.Show("Student ID Already In Used In Elementary", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+
+			else if (student.valJuniorHigh(lrn))
+			{
+				MessageBox.Show("Student ID Already In Used in Junior High", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+
 			else if (verif())
 			{
 				pictureBoxStudentImage.Image.Save(pic, pictureBoxStudentImage.Image.RawFormat);
@@ -558,7 +568,7 @@ namespace Csharp_Student_System
 		{
 			Barcode barcode = new Barcode();
 			Color fontcolor = Color.Black;
-			Color backcolor = Color.Black;
+			Color backcolor = Color.White;
 			Image img = barcode.Encode(TYPE.CODE39, textBoxLRN.Text, fontcolor, backcolor, (int)(pictureBoxBarcode.Width * 0.7), (int)(pictureBoxBarcode.Height * .8));
 			//pictureBoxBarcode.Image = img;
 			sb.pictureBox1.Image = img;

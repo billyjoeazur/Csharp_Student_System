@@ -373,7 +373,7 @@
 			// buttonUpload
 			// 
 			this.buttonUpload.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-			this.buttonUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(131)))), ((int)(((byte)(215)))));
+			this.buttonUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
 			this.buttonUpload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonUpload.BorderRadius = 0;
 			this.buttonUpload.ButtonText = "Upload";

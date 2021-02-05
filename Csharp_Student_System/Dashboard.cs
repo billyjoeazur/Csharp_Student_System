@@ -142,10 +142,10 @@ namespace Csharp_Student_System
 
 		public void userValidate()
 		{
-			string userlevel = "admin";
+			string userlevel = "Admin";
 			if (radioButtonUser.Checked)
 			{
-				userlevel = "user";
+				userlevel = "User";
 			}
 			string username = textBoxUser.Text;
 			string password = textBoxPassword.Text;

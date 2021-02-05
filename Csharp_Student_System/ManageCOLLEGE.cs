@@ -278,6 +278,12 @@ namespace Csharp_Student_System
 			{
 				MessageBox.Show("Student ID Already In Used", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
+
+			else if (student.valMasteral(idno))
+			{
+				MessageBox.Show("Student ID Already In Used In Masteral", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+
 			else if (verif())
 			{
 				pictureBoxStudentImage.Image.Save(pic, pictureBoxStudentImage.Image.RawFormat);

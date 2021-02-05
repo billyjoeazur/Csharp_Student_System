@@ -454,6 +454,10 @@ namespace Csharp_Student_System
 			{
 				MessageBox.Show("Student ID Already In Used", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
+			else if (student.valStudent(idno))
+			{
+				MessageBox.Show("Student ID Already In Used In College", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 			else if (verif())
 			{
 				pictureBoxStudentImage.Image.Save(pic, pictureBoxStudentImage.Image.RawFormat);
@@ -498,7 +502,7 @@ namespace Csharp_Student_System
 		{
 			Barcode barcode = new Barcode();
 			Color fontcolor = Color.Black;
-			Color backcolor = Color.Black;
+			Color backcolor = Color.White;
 			Image img = barcode.Encode(TYPE.CODE39, textBoxIDno.Text, fontcolor, backcolor, (int)(pictureBoxBarcode.Width * 0.8), (int)(pictureBoxBarcode.Height * 0.8));
 			//pictureBoxBarcode.Image = img;
 			sb.pictureBox1.Image = img;
