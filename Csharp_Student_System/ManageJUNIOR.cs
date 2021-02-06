@@ -30,6 +30,7 @@ namespace Csharp_Student_System
 			}
 		}
 		STUDENT student = new STUDENT();
+		MY_DB db = new MY_DB();
 
 		private void textBoxLRN_Enter(object sender, EventArgs e)
 		{
@@ -555,8 +556,26 @@ namespace Csharp_Student_System
 			if (comboBoxGrade.Text == "Grade 7")
 			{
 				comboBoxGroup.Items.Clear();
-				comboBoxGroup.Items.Add("Aguinaldo");
-				comboBoxGroup.Items.Add("Bonifacio");
+				//comboBoxGroup.Items.Add("Aguinaldo");
+				//comboBoxGroup.Items.Add("Bonifacio");
+				try
+				{
+					string selectQuery = "SELECT * FROM `grade7group`";
+					db.openConnection();
+					MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
+					MySqlDataReader reader = command.ExecuteReader();
+					while (reader.Read())
+					{
+
+						comboBoxGroup.Items.Add(reader.GetString("val"));
+					}
+					db.closeConnection();
+				}
+				catch (Exception ex)
+				{
+
+					MessageBox.Show(ex.Message);
+				}
 			}
 			else if (comboBoxGrade.Text == "Grade 8")
 			{

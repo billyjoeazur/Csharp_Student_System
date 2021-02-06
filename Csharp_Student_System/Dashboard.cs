@@ -17,6 +17,8 @@ namespace Csharp_Student_System
 		{
 			InitializeComponent();
 		}
+		MY_DB db = new MY_DB();
+		DashboardClass dashboard = new DashboardClass();
 		STUDENT student = new STUDENT();
 
 		private void textBoxUser_Enter(object sender, EventArgs e)
@@ -97,9 +99,35 @@ namespace Csharp_Student_System
 			}
 		}
 
+		private void LoadCombo(string selectQuery)
+		{
+			try
+			{
+				
+				db.openConnection();
+				MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
+				MySqlDataReader reader = command.ExecuteReader();
+				while (reader.Read())
+				{
+					
+					comboBoxSection.Items.Add(reader.GetString("val"));
+				}
+				db.closeConnection();
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.Message);
+			}
+		}
 		private void Dashboard_Load(object sender, EventArgs e)
 		{
 			fillGrid(new MySqlCommand("SELECT * FROM `users`"));
+			comboBoxGrade.Items.Add("Grade 7");
+			comboBoxGrade.Items.Add("Grade 8");
+			comboBoxGrade.Items.Add("Grade 9");
+			comboBoxGrade.Items.Add("Grade 10");
+			
 		}
 
 		bool empt()
@@ -208,5 +236,88 @@ namespace Csharp_Student_System
 		{
 			this.Hide();
 		}
+
+		void ReloadCombo()
+		{
+			comboBoxSection.Items.Clear();
+			comboBoxSection.Text = "";
+			if (comboBoxGrade.Text == "Grade 7")
+			{
+				LoadCombo("SELECT * FROM `grade7group`");
+			}
+			else if (comboBoxGrade.Text == "Grade 8")
+			{
+				LoadCombo("SELECT * FROM `grade8group`");
+			}
+			else if (comboBoxGrade.Text == "Grade 9")
+			{
+				LoadCombo("SELECT * FROM `grade9group`");
+			}
+			else if (comboBoxGrade.Text == "Grade 10")
+			{
+				LoadCombo("SELECT * FROM `grade10group`");
+			}
+
+		}
+
+		private void btnGrade7Remove_Click(object sender, EventArgs e)
+		{
+			
+			try
+			{
+				string value = comboBoxSection.Text;
+				string grade = comboBoxGrade.Text;
+
+				if (value == "")
+				{
+					MessageBox.Show("Select Section To Delete", "Delete Section", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+
+				//show a confirmation before deleting the student
+				else if(MessageBox.Show("Are You Sure You Want To Delete This Section", "Delete Section", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				{
+					if(value != null)
+					{
+						dashboard.deleteGrade7group(value, grade);
+						MessageBox.Show("Section Deleted", "Delete Section", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						ReloadCombo();
+
+					}
+					else
+					{
+						MessageBox.Show("Section Not Deleted", "Delete Section", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
+				}
+			}
+			catch
+			{
+				MessageBox.Show("Please Enter Existing Section", "Delete Section", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		
+
+		private void btnGrade7Add_Click(object sender, EventArgs e)
+		{
+			string value = comboBoxSection.Text;
+			string grade = comboBoxGrade.Text;
+			if(value == "")
+			{
+				MessageBox.Show("Enter Section To Be Added", "Add Section", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			else if(value != null)
+			{
+				dashboard.insertGrade7group(value, grade);
+				MessageBox.Show("New Section Added", "Add Section", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				ReloadCombo();
+			}
+		}
+
+		private void comboBoxGrade_Leave(object sender, EventArgs e)
+		{
+			ReloadCombo();
+			
+		}
+
 	}
 }

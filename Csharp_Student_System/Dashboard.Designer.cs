@@ -38,19 +38,25 @@
 			this.textBoxUser = new Bunifu.Framework.UI.BunifuMetroTextbox();
 			this.textBoxPassword = new Bunifu.Framework.UI.BunifuMetroTextbox();
 			this.panelGrayBG = new System.Windows.Forms.Panel();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
 			this.buttonLogin = new System.Windows.Forms.Button();
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.label2 = new System.Windows.Forms.Label();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.comboBoxSection = new System.Windows.Forms.ComboBox();
+			this.btnGrade7Add = new System.Windows.Forms.Button();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.comboBoxGrade = new System.Windows.Forms.ComboBox();
+			this.btnGrade7Remove = new System.Windows.Forms.Button();
 			this.panelHeader.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.panelGrayBG.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.tableLayoutPanel3.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panelHeader
@@ -189,15 +195,24 @@
 			// 
 			// panelGrayBG
 			// 
-			this.panelGrayBG.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.panelGrayBG.BackColor = System.Drawing.Color.Silver;
+			this.panelGrayBG.Controls.Add(this.dataGridView1);
 			this.panelGrayBG.Controls.Add(this.tableLayoutPanel3);
 			this.panelGrayBG.Controls.Add(this.tableLayoutPanel2);
 			this.panelGrayBG.Controls.Add(this.tableLayoutPanel1);
-			this.panelGrayBG.Location = new System.Drawing.Point(274, 56);
+			this.panelGrayBG.Location = new System.Drawing.Point(6, 56);
 			this.panelGrayBG.Name = "panelGrayBG";
 			this.panelGrayBG.Size = new System.Drawing.Size(280, 430);
 			this.panelGrayBG.TabIndex = 3;
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Location = new System.Drawing.Point(6, 409);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.Size = new System.Drawing.Size(268, 150);
+			this.dataGridView1.TabIndex = 4;
+			this.dataGridView1.Visible = false;
 			// 
 			// tableLayoutPanel3
 			// 
@@ -247,14 +262,55 @@
 			this.label2.Text = "Create New Account";
 			this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
 			// 
-			// dataGridView1
+			// comboBoxSection
 			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(557, 56);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(268, 150);
-			this.dataGridView1.TabIndex = 4;
-			this.dataGridView1.Visible = false;
+			this.comboBoxSection.FormattingEnabled = true;
+			this.comboBoxSection.Location = new System.Drawing.Point(168, 21);
+			this.comboBoxSection.Name = "comboBoxSection";
+			this.comboBoxSection.Size = new System.Drawing.Size(156, 24);
+			this.comboBoxSection.TabIndex = 4;
+			// 
+			// btnGrade7Add
+			// 
+			this.btnGrade7Add.Location = new System.Drawing.Point(168, 51);
+			this.btnGrade7Add.Name = "btnGrade7Add";
+			this.btnGrade7Add.Size = new System.Drawing.Size(71, 23);
+			this.btnGrade7Add.TabIndex = 6;
+			this.btnGrade7Add.Text = "Add";
+			this.btnGrade7Add.UseVisualStyleBackColor = true;
+			this.btnGrade7Add.Click += new System.EventHandler(this.btnGrade7Add_Click);
+			// 
+			// groupBox2
+			// 
+			this.groupBox2.Controls.Add(this.comboBoxGrade);
+			this.groupBox2.Controls.Add(this.btnGrade7Remove);
+			this.groupBox2.Controls.Add(this.comboBoxSection);
+			this.groupBox2.Controls.Add(this.btnGrade7Add);
+			this.groupBox2.Location = new System.Drawing.Point(292, 105);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(340, 88);
+			this.groupBox2.TabIndex = 7;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Junior High Sections";
+			// 
+			// comboBoxGrade
+			// 
+			this.comboBoxGrade.FormattingEnabled = true;
+			this.comboBoxGrade.Location = new System.Drawing.Point(6, 21);
+			this.comboBoxGrade.Name = "comboBoxGrade";
+			this.comboBoxGrade.Size = new System.Drawing.Size(156, 24);
+			this.comboBoxGrade.TabIndex = 8;
+			this.comboBoxGrade.Leave += new System.EventHandler(this.comboBoxGrade_Leave);
+			// 
+			// btnGrade7Remove
+			// 
+			this.btnGrade7Remove.Location = new System.Drawing.Point(253, 51);
+			this.btnGrade7Remove.Name = "btnGrade7Remove";
+			this.btnGrade7Remove.Size = new System.Drawing.Size(71, 23);
+			this.btnGrade7Remove.TabIndex = 7;
+			this.btnGrade7Remove.Text = "Remove";
+			this.btnGrade7Remove.UseVisualStyleBackColor = true;
+			this.btnGrade7Remove.Click += new System.EventHandler(this.btnGrade7Remove_Click);
 			// 
 			// Dashboard
 			// 
@@ -262,7 +318,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.ClientSize = new System.Drawing.Size(814, 498);
-			this.Controls.Add(this.dataGridView1);
+			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.panelGrayBG);
 			this.Controls.Add(this.panelHeader);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,10 +333,11 @@
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.panelGrayBG.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.tableLayoutPanel3.ResumeLayout(false);
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.tableLayoutPanel2.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			this.groupBox2.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -302,5 +359,10 @@
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
 		private System.Windows.Forms.Button buttonLogin;
 		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.ComboBox comboBoxSection;
+		private System.Windows.Forms.Button btnGrade7Add;
+		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.Button btnGrade7Remove;
+		private System.Windows.Forms.ComboBox comboBoxGrade;
 	}
 }
