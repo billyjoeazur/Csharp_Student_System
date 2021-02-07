@@ -99,17 +99,15 @@ namespace Csharp_Student_System
 			}
 		}
 
-		private void LoadCombo(string selectQuery)
+		private void LoadComboSection(string selectQuery)
 		{
 			try
 			{
-				
 				db.openConnection();
 				MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
 				MySqlDataReader reader = command.ExecuteReader();
 				while (reader.Read())
 				{
-					
 					comboBoxSection.Items.Add(reader.GetString("val"));
 				}
 				db.closeConnection();
@@ -120,6 +118,51 @@ namespace Csharp_Student_System
 				MessageBox.Show(ex.Message);
 			}
 		}
+
+		private void LoadComboSY()
+		{
+			try
+			{
+				string selectQuery = "SELECT * FROM `schoolyear`";
+				db.openConnection();
+				MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
+				MySqlDataReader reader = command.ExecuteReader();
+				while (reader.Read())
+				{
+
+					comboBoxSY.Items.Add(reader.GetString("val"));
+				}
+				db.closeConnection();
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.Message);
+			}
+		}
+
+		private void LoadComboStrand()
+		{
+			try
+			{
+				string selectQuery = "SELECT * FROM `seniorhighstrand`";
+				db.openConnection();
+				MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
+				MySqlDataReader reader = command.ExecuteReader();
+				while (reader.Read())
+				{
+
+					comboBoxStrand.Items.Add(reader.GetString("val"));
+				}
+				db.closeConnection();
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.Message);
+			}
+		}
+
 		private void Dashboard_Load(object sender, EventArgs e)
 		{
 			fillGrid(new MySqlCommand("SELECT * FROM `users`"));
@@ -127,7 +170,8 @@ namespace Csharp_Student_System
 			comboBoxGrade.Items.Add("Grade 8");
 			comboBoxGrade.Items.Add("Grade 9");
 			comboBoxGrade.Items.Add("Grade 10");
-			
+			LoadComboSY();
+			LoadComboStrand();
 		}
 
 		bool empt()
@@ -241,21 +285,30 @@ namespace Csharp_Student_System
 		{
 			comboBoxSection.Items.Clear();
 			comboBoxSection.Text = "";
+
+			comboBoxSY.Items.Clear();
+			comboBoxSY.Text = "";
+			LoadComboSY();
+
+			comboBoxStrand.Items.Clear();
+			comboBoxStrand.Text = "";
+			LoadComboStrand();
+
 			if (comboBoxGrade.Text == "Grade 7")
 			{
-				LoadCombo("SELECT * FROM `grade7group`");
+				LoadComboSection("SELECT * FROM `grade7group`");
 			}
 			else if (comboBoxGrade.Text == "Grade 8")
 			{
-				LoadCombo("SELECT * FROM `grade8group`");
+				LoadComboSection("SELECT * FROM `grade8group`");
 			}
 			else if (comboBoxGrade.Text == "Grade 9")
 			{
-				LoadCombo("SELECT * FROM `grade9group`");
+				LoadComboSection("SELECT * FROM `grade9group`");
 			}
 			else if (comboBoxGrade.Text == "Grade 10")
 			{
-				LoadCombo("SELECT * FROM `grade10group`");
+				LoadComboSection("SELECT * FROM `grade10group`");
 			}
 
 		}
@@ -278,7 +331,7 @@ namespace Csharp_Student_System
 				{
 					if(value != null)
 					{
-						dashboard.deleteGrade7group(value, grade);
+						dashboard.deleteGradegroup(value, grade);
 						MessageBox.Show("Section Deleted", "Delete Section", MessageBoxButtons.OK, MessageBoxIcon.Information);
 						ReloadCombo();
 
@@ -307,7 +360,7 @@ namespace Csharp_Student_System
 			}
 			else if(value != null)
 			{
-				dashboard.insertGrade7group(value, grade);
+				dashboard.insertGradegroup(value, grade);
 				MessageBox.Show("New Section Added", "Add Section", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				ReloadCombo();
 			}
@@ -319,5 +372,100 @@ namespace Csharp_Student_System
 			
 		}
 
+		private void btnAddSY_Click(object sender, EventArgs e)
+		{
+			string value = comboBoxSY.Text;
+			if (value == "")
+			{
+				MessageBox.Show("Enter School Year To Be Added", "Add School Year", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			else if (value != null)
+			{
+				dashboard.AddSY(value);
+				MessageBox.Show("New School Year Added", "Add School Year", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				ReloadCombo();
+			}
+		}
+
+		private void btnRemoveSY_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				string value = comboBoxSY.Text;
+
+				if (value == "")
+				{
+					MessageBox.Show("Select School Year To Delete", "Delete School Year", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+
+				//show a confirmation before deleting the student
+				else if (MessageBox.Show("Are You Sure You Want To Delete This School Year", "Delete School Year", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				{
+					if (value != null)
+					{
+						dashboard.DeleteSY(value);
+						MessageBox.Show("School Year Deleted", "Delete School Year", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						ReloadCombo();
+
+					}
+					else
+					{
+						MessageBox.Show("School Year Not Deleted", "Delete School Year", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
+				}
+			}
+			catch
+			{
+				MessageBox.Show("Please Enter Existing School Year", "Delete School Year", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void btnAddStrand_Click(object sender, EventArgs e)
+		{
+			string value = comboBoxStrand.Text;
+			if (value == "")
+			{
+				MessageBox.Show("Enter Strand To Be Added", "Add Strand", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			else if (value != null)
+			{
+				dashboard.AddStrand(value);
+				MessageBox.Show("New Strand Added", "Add Strand", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				ReloadCombo();
+			}
+		}
+
+		private void btnRemoveStrand_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				string value = comboBoxStrand.Text;
+
+				if (value == "")
+				{
+					MessageBox.Show("Select Strand To Delete", "Delete Strand", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+
+				//show a confirmation before deleting the student
+				else if (MessageBox.Show("Are You Sure You Want To Delete This Strand", "Delete Strand", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				{
+					if (value != null)
+					{
+						dashboard.DeleteStrand(value);
+						MessageBox.Show("Strand Deleted", "Delete Strand", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						ReloadCombo();
+
+					}
+					else
+					{
+						MessageBox.Show("Strand Not Deleted", "Delete Strand", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
+				}
+			}
+			catch
+			{
+				MessageBox.Show("Please Enter Existing Strand", "Delete Strand", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
 	}
 }

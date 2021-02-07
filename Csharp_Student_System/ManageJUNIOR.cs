@@ -219,16 +219,24 @@ namespace Csharp_Student_System
 			fillGrid(new MySqlCommand("SELECT * FROM `juniorhigh`"));
 
 			//add items in combobox school year
-			comboBoxSY.Items.Add("2020-2021");
-			comboBoxSY.Items.Add("2021-2022");
-			comboBoxSY.Items.Add("2022-2023");
-			comboBoxSY.Items.Add("2023-2024");
-			comboBoxSY.Items.Add("2024-2025");
-			comboBoxSY.Items.Add("2025-2026");
-			comboBoxSY.Items.Add("2026-2027");
-			comboBoxSY.Items.Add("2027-2028");
-			comboBoxSY.Items.Add("2028-2029");
-			comboBoxSY.Items.Add("2029-2030");
+			try
+			{
+				string selectQuery = "SELECT * FROM `schoolyear`";
+				db.openConnection();
+				MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
+				MySqlDataReader reader = command.ExecuteReader();
+				while (reader.Read())
+				{
+
+					comboBoxSY.Items.Add(reader.GetString("val"));
+				}
+				db.closeConnection();
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.Message);
+			}
 
 			//add items in combobox grade
 			comboBoxGrade.Items.Add("Grade 7");
@@ -580,20 +588,74 @@ namespace Csharp_Student_System
 			else if (comboBoxGrade.Text == "Grade 8")
 			{
 				comboBoxGroup.Items.Clear();
-				comboBoxGroup.Items.Add("Osmena");
-				comboBoxGroup.Items.Add("Roxas");
+				//comboBoxGroup.Items.Add("Osmena");
+				//comboBoxGroup.Items.Add("Roxas");
+				try
+				{
+					string selectQuery = "SELECT * FROM `grade8group`";
+					db.openConnection();
+					MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
+					MySqlDataReader reader = command.ExecuteReader();
+					while (reader.Read())
+					{
+
+						comboBoxGroup.Items.Add(reader.GetString("val"));
+					}
+					db.closeConnection();
+				}
+				catch (Exception ex)
+				{
+
+					MessageBox.Show(ex.Message);
+				}
 			}
 			else if (comboBoxGrade.Text == "Grade 9")
 			{
 				comboBoxGroup.Items.Clear();
-				comboBoxGroup.Items.Add("Magsaysay");
-				comboBoxGroup.Items.Add("Garcia");
+				//comboBoxGroup.Items.Add("Magsaysay");
+				//comboBoxGroup.Items.Add("Garcia");
+				try
+				{
+					string selectQuery = "SELECT * FROM `grade9group`";
+					db.openConnection();
+					MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
+					MySqlDataReader reader = command.ExecuteReader();
+					while (reader.Read())
+					{
+
+						comboBoxGroup.Items.Add(reader.GetString("val"));
+					}
+					db.closeConnection();
+				}
+				catch (Exception ex)
+				{
+
+					MessageBox.Show(ex.Message);
+				}
 			}
 			else if (comboBoxGrade.Text == "Grade 10")
 			{
 				comboBoxGroup.Items.Clear();
-				comboBoxGroup.Items.Add("Marcos");
-				comboBoxGroup.Items.Add("Aquino");
+				//comboBoxGroup.Items.Add("Marcos");
+				//comboBoxGroup.Items.Add("Aquino");
+				try
+				{
+					string selectQuery = "SELECT * FROM `grade10group`";
+					db.openConnection();
+					MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
+					MySqlDataReader reader = command.ExecuteReader();
+					while (reader.Read())
+					{
+
+						comboBoxGroup.Items.Add(reader.GetString("val"));
+					}
+					db.closeConnection();
+				}
+				catch (Exception ex)
+				{
+
+					MessageBox.Show(ex.Message);
+				}
 			}
 		}
 

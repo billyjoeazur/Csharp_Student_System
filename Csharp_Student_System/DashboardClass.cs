@@ -13,7 +13,8 @@ namespace Csharp_Student_System
 	{
 		MY_DB db = new MY_DB();
 
-		public void deleteGrade7group(string val, string grade)
+		
+		public void deleteGradegroup(string val, string grade)
 		{
 			if(grade == "Grade 7")
 			{
@@ -73,7 +74,7 @@ namespace Csharp_Student_System
 			}
 		}
 
-		public void insertGrade7group(string value, string grade)
+		public void insertGradegroup(string value, string grade)
 		{
 			if(grade == "Grade 7")
 			{
@@ -134,5 +135,64 @@ namespace Csharp_Student_System
 
 		}
 
+		public void DeleteSY(string val)
+		{
+			MySqlCommand command = new MySqlCommand("DELETE FROM `schoolyear` WHERE `val` = @val", db.getConnection);
+			command.Parameters.Add("@val", MySqlDbType.VarChar).Value = val;
+			db.openConnection();
+			if (command.ExecuteNonQuery() == 1)
+			{
+				db.closeConnection();
+			}
+			else
+			{
+				db.closeConnection();
+			}
+		}
+
+		public void AddSY(string val)
+		{
+			MySqlCommand command = new MySqlCommand("INSERT INTO `schoolyear`(`val`) VALUES (@val)", db.getConnection);
+			command.Parameters.Add("@val", MySqlDbType.VarChar).Value = val;
+			db.openConnection();
+			if (command.ExecuteNonQuery() == 1)
+			{
+				db.closeConnection();
+			}
+			else
+			{
+				db.closeConnection();
+			}
+		}
+
+		public void DeleteStrand(string val)
+		{
+			MySqlCommand command = new MySqlCommand("DELETE FROM `seniorhighstrand` WHERE `val` = @val", db.getConnection);
+			command.Parameters.Add("@val", MySqlDbType.VarChar).Value = val;
+			db.openConnection();
+			if (command.ExecuteNonQuery() == 1)
+			{
+				db.closeConnection();
+			}
+			else
+			{
+				db.closeConnection();
+			}
+		}
+
+		public void AddStrand(string val)
+		{
+			MySqlCommand command = new MySqlCommand("INSERT INTO `seniorhighstrand`(`val`) VALUES (@val)", db.getConnection);
+			command.Parameters.Add("@val", MySqlDbType.VarChar).Value = val;
+			db.openConnection();
+			if (command.ExecuteNonQuery() == 1)
+			{
+				db.closeConnection();
+			}
+			else
+			{
+				db.closeConnection();
+			}
+		}
 	}
 }

@@ -217,7 +217,7 @@
 			this.buttonNewAccount.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.buttonNewAccount.Size = new System.Drawing.Size(115, 30);
 			this.buttonNewAccount.TabIndex = 14;
-			this.buttonNewAccount.Text = "New Account";
+			this.buttonNewAccount.Text = "Dashboard";
 			this.buttonNewAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.buttonNewAccount.UseVisualStyleBackColor = false;
 			this.buttonNewAccount.Click += new System.EventHandler(this.button6_Click_1);

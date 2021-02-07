@@ -44,10 +44,19 @@
 			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.label2 = new System.Windows.Forms.Label();
 			this.comboBoxSection = new System.Windows.Forms.ComboBox();
-			this.btnGrade7Add = new System.Windows.Forms.Button();
+			this.btnGradeAdd = new System.Windows.Forms.Button();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
 			this.comboBoxGrade = new System.Windows.Forms.ComboBox();
-			this.btnGrade7Remove = new System.Windows.Forms.Button();
+			this.btnGradeRemove = new System.Windows.Forms.Button();
+			this.groupBoxSY = new System.Windows.Forms.GroupBox();
+			this.comboBoxSY = new System.Windows.Forms.ComboBox();
+			this.btnRemoveSY = new System.Windows.Forms.Button();
+			this.btnAddSY = new System.Windows.Forms.Button();
+			this.groupBoxStrand = new System.Windows.Forms.GroupBox();
+			this.comboBoxStrand = new System.Windows.Forms.ComboBox();
+			this.btnRemoveStrand = new System.Windows.Forms.Button();
+			this.btnAddStrand = new System.Windows.Forms.Button();
+			this.groupBoxCourse = new System.Windows.Forms.GroupBox();
 			this.panelHeader.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
@@ -57,6 +66,8 @@
 			this.tableLayoutPanel3.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.groupBox2.SuspendLayout();
+			this.groupBoxSY.SuspendLayout();
+			this.groupBoxStrand.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panelHeader
@@ -270,25 +281,25 @@
 			this.comboBoxSection.Size = new System.Drawing.Size(156, 24);
 			this.comboBoxSection.TabIndex = 4;
 			// 
-			// btnGrade7Add
+			// btnGradeAdd
 			// 
-			this.btnGrade7Add.Location = new System.Drawing.Point(168, 51);
-			this.btnGrade7Add.Name = "btnGrade7Add";
-			this.btnGrade7Add.Size = new System.Drawing.Size(71, 23);
-			this.btnGrade7Add.TabIndex = 6;
-			this.btnGrade7Add.Text = "Add";
-			this.btnGrade7Add.UseVisualStyleBackColor = true;
-			this.btnGrade7Add.Click += new System.EventHandler(this.btnGrade7Add_Click);
+			this.btnGradeAdd.Location = new System.Drawing.Point(168, 51);
+			this.btnGradeAdd.Name = "btnGradeAdd";
+			this.btnGradeAdd.Size = new System.Drawing.Size(71, 23);
+			this.btnGradeAdd.TabIndex = 6;
+			this.btnGradeAdd.Text = "Add";
+			this.btnGradeAdd.UseVisualStyleBackColor = true;
+			this.btnGradeAdd.Click += new System.EventHandler(this.btnGrade7Add_Click);
 			// 
 			// groupBox2
 			// 
 			this.groupBox2.Controls.Add(this.comboBoxGrade);
-			this.groupBox2.Controls.Add(this.btnGrade7Remove);
+			this.groupBox2.Controls.Add(this.btnGradeRemove);
 			this.groupBox2.Controls.Add(this.comboBoxSection);
-			this.groupBox2.Controls.Add(this.btnGrade7Add);
-			this.groupBox2.Location = new System.Drawing.Point(292, 105);
+			this.groupBox2.Controls.Add(this.btnGradeAdd);
+			this.groupBox2.Location = new System.Drawing.Point(293, 56);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(340, 88);
+			this.groupBox2.Size = new System.Drawing.Size(333, 88);
 			this.groupBox2.TabIndex = 7;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Junior High Sections";
@@ -302,15 +313,104 @@
 			this.comboBoxGrade.TabIndex = 8;
 			this.comboBoxGrade.Leave += new System.EventHandler(this.comboBoxGrade_Leave);
 			// 
-			// btnGrade7Remove
+			// btnGradeRemove
 			// 
-			this.btnGrade7Remove.Location = new System.Drawing.Point(253, 51);
-			this.btnGrade7Remove.Name = "btnGrade7Remove";
-			this.btnGrade7Remove.Size = new System.Drawing.Size(71, 23);
-			this.btnGrade7Remove.TabIndex = 7;
-			this.btnGrade7Remove.Text = "Remove";
-			this.btnGrade7Remove.UseVisualStyleBackColor = true;
-			this.btnGrade7Remove.Click += new System.EventHandler(this.btnGrade7Remove_Click);
+			this.btnGradeRemove.Location = new System.Drawing.Point(253, 51);
+			this.btnGradeRemove.Name = "btnGradeRemove";
+			this.btnGradeRemove.Size = new System.Drawing.Size(71, 23);
+			this.btnGradeRemove.TabIndex = 7;
+			this.btnGradeRemove.Text = "Remove";
+			this.btnGradeRemove.UseVisualStyleBackColor = true;
+			this.btnGradeRemove.Click += new System.EventHandler(this.btnGrade7Remove_Click);
+			// 
+			// groupBoxSY
+			// 
+			this.groupBoxSY.Controls.Add(this.comboBoxSY);
+			this.groupBoxSY.Controls.Add(this.btnRemoveSY);
+			this.groupBoxSY.Controls.Add(this.btnAddSY);
+			this.groupBoxSY.Location = new System.Drawing.Point(640, 56);
+			this.groupBoxSY.Name = "groupBoxSY";
+			this.groupBoxSY.Size = new System.Drawing.Size(168, 88);
+			this.groupBoxSY.TabIndex = 8;
+			this.groupBoxSY.TabStop = false;
+			this.groupBoxSY.Text = "School Year";
+			// 
+			// comboBoxSY
+			// 
+			this.comboBoxSY.FormattingEnabled = true;
+			this.comboBoxSY.Location = new System.Drawing.Point(6, 21);
+			this.comboBoxSY.Name = "comboBoxSY";
+			this.comboBoxSY.Size = new System.Drawing.Size(156, 24);
+			this.comboBoxSY.TabIndex = 10;
+			// 
+			// btnRemoveSY
+			// 
+			this.btnRemoveSY.Location = new System.Drawing.Point(91, 52);
+			this.btnRemoveSY.Name = "btnRemoveSY";
+			this.btnRemoveSY.Size = new System.Drawing.Size(71, 23);
+			this.btnRemoveSY.TabIndex = 9;
+			this.btnRemoveSY.Text = "Remove";
+			this.btnRemoveSY.UseVisualStyleBackColor = true;
+			this.btnRemoveSY.Click += new System.EventHandler(this.btnRemoveSY_Click);
+			// 
+			// btnAddSY
+			// 
+			this.btnAddSY.Location = new System.Drawing.Point(6, 52);
+			this.btnAddSY.Name = "btnAddSY";
+			this.btnAddSY.Size = new System.Drawing.Size(71, 23);
+			this.btnAddSY.TabIndex = 8;
+			this.btnAddSY.Text = "Add";
+			this.btnAddSY.UseVisualStyleBackColor = true;
+			this.btnAddSY.Click += new System.EventHandler(this.btnAddSY_Click);
+			// 
+			// groupBoxStrand
+			// 
+			this.groupBoxStrand.Controls.Add(this.comboBoxStrand);
+			this.groupBoxStrand.Controls.Add(this.btnRemoveStrand);
+			this.groupBoxStrand.Controls.Add(this.btnAddStrand);
+			this.groupBoxStrand.Location = new System.Drawing.Point(640, 150);
+			this.groupBoxStrand.Name = "groupBoxStrand";
+			this.groupBoxStrand.Size = new System.Drawing.Size(168, 87);
+			this.groupBoxStrand.TabIndex = 9;
+			this.groupBoxStrand.TabStop = false;
+			this.groupBoxStrand.Text = "Senior High Strands";
+			// 
+			// comboBoxStrand
+			// 
+			this.comboBoxStrand.FormattingEnabled = true;
+			this.comboBoxStrand.Location = new System.Drawing.Point(6, 21);
+			this.comboBoxStrand.Name = "comboBoxStrand";
+			this.comboBoxStrand.Size = new System.Drawing.Size(156, 24);
+			this.comboBoxStrand.TabIndex = 13;
+			// 
+			// btnRemoveStrand
+			// 
+			this.btnRemoveStrand.Location = new System.Drawing.Point(91, 51);
+			this.btnRemoveStrand.Name = "btnRemoveStrand";
+			this.btnRemoveStrand.Size = new System.Drawing.Size(71, 23);
+			this.btnRemoveStrand.TabIndex = 12;
+			this.btnRemoveStrand.Text = "Remove";
+			this.btnRemoveStrand.UseVisualStyleBackColor = true;
+			this.btnRemoveStrand.Click += new System.EventHandler(this.btnRemoveStrand_Click);
+			// 
+			// btnAddStrand
+			// 
+			this.btnAddStrand.Location = new System.Drawing.Point(6, 51);
+			this.btnAddStrand.Name = "btnAddStrand";
+			this.btnAddStrand.Size = new System.Drawing.Size(71, 23);
+			this.btnAddStrand.TabIndex = 11;
+			this.btnAddStrand.Text = "Add";
+			this.btnAddStrand.UseVisualStyleBackColor = true;
+			this.btnAddStrand.Click += new System.EventHandler(this.btnAddStrand_Click);
+			// 
+			// groupBoxCourse
+			// 
+			this.groupBoxCourse.Location = new System.Drawing.Point(293, 150);
+			this.groupBoxCourse.Name = "groupBoxCourse";
+			this.groupBoxCourse.Size = new System.Drawing.Size(333, 100);
+			this.groupBoxCourse.TabIndex = 10;
+			this.groupBoxCourse.TabStop = false;
+			this.groupBoxCourse.Text = "College Course";
 			// 
 			// Dashboard
 			// 
@@ -318,6 +418,9 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.ClientSize = new System.Drawing.Size(814, 498);
+			this.Controls.Add(this.groupBoxCourse);
+			this.Controls.Add(this.groupBoxStrand);
+			this.Controls.Add(this.groupBoxSY);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.panelGrayBG);
 			this.Controls.Add(this.panelHeader);
@@ -338,6 +441,8 @@
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.tableLayoutPanel2.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
+			this.groupBoxSY.ResumeLayout(false);
+			this.groupBoxStrand.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -360,9 +465,18 @@
 		private System.Windows.Forms.Button buttonLogin;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.ComboBox comboBoxSection;
-		private System.Windows.Forms.Button btnGrade7Add;
+		private System.Windows.Forms.Button btnGradeAdd;
 		private System.Windows.Forms.GroupBox groupBox2;
-		private System.Windows.Forms.Button btnGrade7Remove;
+		private System.Windows.Forms.Button btnGradeRemove;
 		private System.Windows.Forms.ComboBox comboBoxGrade;
+		private System.Windows.Forms.GroupBox groupBoxSY;
+		private System.Windows.Forms.ComboBox comboBoxSY;
+		private System.Windows.Forms.Button btnRemoveSY;
+		private System.Windows.Forms.Button btnAddSY;
+		private System.Windows.Forms.GroupBox groupBoxStrand;
+		private System.Windows.Forms.ComboBox comboBoxStrand;
+		private System.Windows.Forms.Button btnRemoveStrand;
+		private System.Windows.Forms.Button btnAddStrand;
+		private System.Windows.Forms.GroupBox groupBoxCourse;
 	}
 }

@@ -30,6 +30,7 @@ namespace Csharp_Student_System
 			}
 		}
 		STUDENT student = new STUDENT();
+		MY_DB db = new MY_DB();
 
 		private void textBoxIDno_Enter(object sender, EventArgs e)
 		{
@@ -192,11 +193,24 @@ namespace Csharp_Student_System
 			comboBoxYear.Items.Add("IV");
 
 			//add items in combobox school year
-			comboBoxSY.Items.Add("2020-2021");
-			comboBoxSY.Items.Add("2021-2022");
-			comboBoxSY.Items.Add("2022-2023");
-			comboBoxSY.Items.Add("2023-2024");
-			comboBoxSY.Items.Add("2024-2025");
+			try
+			{
+				string selectQuery = "SELECT * FROM `schoolyear`";
+				db.openConnection();
+				MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
+				MySqlDataReader reader = command.ExecuteReader();
+				while (reader.Read())
+				{
+
+					comboBoxSY.Items.Add(reader.GetString("val"));
+				}
+				db.closeConnection();
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.Message);
+			}
 		}
 
 		private void buttonUpload_Click(object sender, EventArgs e)
