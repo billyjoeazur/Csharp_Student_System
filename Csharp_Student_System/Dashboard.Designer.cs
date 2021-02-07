@@ -57,6 +57,9 @@
 			this.btnRemoveStrand = new System.Windows.Forms.Button();
 			this.btnAddStrand = new System.Windows.Forms.Button();
 			this.groupBoxCourse = new System.Windows.Forms.GroupBox();
+			this.comboBoxCourse = new System.Windows.Forms.ComboBox();
+			this.btnRemoveCourse = new System.Windows.Forms.Button();
+			this.btnAddCourse = new System.Windows.Forms.Button();
 			this.panelHeader.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
@@ -68,6 +71,7 @@
 			this.groupBox2.SuspendLayout();
 			this.groupBoxSY.SuspendLayout();
 			this.groupBoxStrand.SuspendLayout();
+			this.groupBoxCourse.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// panelHeader
@@ -328,7 +332,7 @@
 			this.groupBoxSY.Controls.Add(this.comboBoxSY);
 			this.groupBoxSY.Controls.Add(this.btnRemoveSY);
 			this.groupBoxSY.Controls.Add(this.btnAddSY);
-			this.groupBoxSY.Location = new System.Drawing.Point(640, 56);
+			this.groupBoxSY.Location = new System.Drawing.Point(293, 163);
 			this.groupBoxSY.Name = "groupBoxSY";
 			this.groupBoxSY.Size = new System.Drawing.Size(168, 88);
 			this.groupBoxSY.TabIndex = 8;
@@ -368,7 +372,7 @@
 			this.groupBoxStrand.Controls.Add(this.comboBoxStrand);
 			this.groupBoxStrand.Controls.Add(this.btnRemoveStrand);
 			this.groupBoxStrand.Controls.Add(this.btnAddStrand);
-			this.groupBoxStrand.Location = new System.Drawing.Point(640, 150);
+			this.groupBoxStrand.Location = new System.Drawing.Point(293, 272);
 			this.groupBoxStrand.Name = "groupBoxStrand";
 			this.groupBoxStrand.Size = new System.Drawing.Size(168, 87);
 			this.groupBoxStrand.TabIndex = 9;
@@ -405,12 +409,43 @@
 			// 
 			// groupBoxCourse
 			// 
-			this.groupBoxCourse.Location = new System.Drawing.Point(293, 150);
+			this.groupBoxCourse.Controls.Add(this.comboBoxCourse);
+			this.groupBoxCourse.Controls.Add(this.btnRemoveCourse);
+			this.groupBoxCourse.Controls.Add(this.btnAddCourse);
+			this.groupBoxCourse.Location = new System.Drawing.Point(293, 379);
 			this.groupBoxCourse.Name = "groupBoxCourse";
-			this.groupBoxCourse.Size = new System.Drawing.Size(333, 100);
+			this.groupBoxCourse.Size = new System.Drawing.Size(168, 87);
 			this.groupBoxCourse.TabIndex = 10;
 			this.groupBoxCourse.TabStop = false;
 			this.groupBoxCourse.Text = "College Course";
+			// 
+			// comboBoxCourse
+			// 
+			this.comboBoxCourse.FormattingEnabled = true;
+			this.comboBoxCourse.Location = new System.Drawing.Point(6, 17);
+			this.comboBoxCourse.Name = "comboBoxCourse";
+			this.comboBoxCourse.Size = new System.Drawing.Size(156, 24);
+			this.comboBoxCourse.TabIndex = 16;
+			// 
+			// btnRemoveCourse
+			// 
+			this.btnRemoveCourse.Location = new System.Drawing.Point(91, 47);
+			this.btnRemoveCourse.Name = "btnRemoveCourse";
+			this.btnRemoveCourse.Size = new System.Drawing.Size(71, 23);
+			this.btnRemoveCourse.TabIndex = 15;
+			this.btnRemoveCourse.Text = "Remove";
+			this.btnRemoveCourse.UseVisualStyleBackColor = true;
+			this.btnRemoveCourse.Click += new System.EventHandler(this.btnRemoveCourse_Click);
+			// 
+			// btnAddCourse
+			// 
+			this.btnAddCourse.Location = new System.Drawing.Point(6, 47);
+			this.btnAddCourse.Name = "btnAddCourse";
+			this.btnAddCourse.Size = new System.Drawing.Size(71, 23);
+			this.btnAddCourse.TabIndex = 14;
+			this.btnAddCourse.Text = "Add";
+			this.btnAddCourse.UseVisualStyleBackColor = true;
+			this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
 			// 
 			// Dashboard
 			// 
@@ -443,6 +478,7 @@
 			this.groupBox2.ResumeLayout(false);
 			this.groupBoxSY.ResumeLayout(false);
 			this.groupBoxStrand.ResumeLayout(false);
+			this.groupBoxCourse.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -478,5 +514,8 @@
 		private System.Windows.Forms.Button btnRemoveStrand;
 		private System.Windows.Forms.Button btnAddStrand;
 		private System.Windows.Forms.GroupBox groupBoxCourse;
+		private System.Windows.Forms.ComboBox comboBoxCourse;
+		private System.Windows.Forms.Button btnRemoveCourse;
+		private System.Windows.Forms.Button btnAddCourse;
 	}
 }

@@ -163,6 +163,28 @@ namespace Csharp_Student_System
 			}
 		}
 
+		private void LoadComboCourse()
+		{
+			try
+			{
+				string selectQuery = "SELECT * FROM `collegecourse`";
+				db.openConnection();
+				MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
+				MySqlDataReader reader = command.ExecuteReader();
+				while (reader.Read())
+				{
+
+					comboBoxCourse.Items.Add(reader.GetString("val"));
+				}
+				db.closeConnection();
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.Message);
+			}
+		}
+
 		private void Dashboard_Load(object sender, EventArgs e)
 		{
 			fillGrid(new MySqlCommand("SELECT * FROM `users`"));
@@ -172,6 +194,7 @@ namespace Csharp_Student_System
 			comboBoxGrade.Items.Add("Grade 10");
 			LoadComboSY();
 			LoadComboStrand();
+			LoadComboCourse();
 		}
 
 		bool empt()
@@ -293,6 +316,10 @@ namespace Csharp_Student_System
 			comboBoxStrand.Items.Clear();
 			comboBoxStrand.Text = "";
 			LoadComboStrand();
+
+			comboBoxCourse.Items.Clear();
+			comboBoxCourse.Text = "";
+			LoadComboCourse();
 
 			if (comboBoxGrade.Text == "Grade 7")
 			{
@@ -465,6 +492,54 @@ namespace Csharp_Student_System
 			catch
 			{
 				MessageBox.Show("Please Enter Existing Strand", "Delete Strand", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		private void btnAddCourse_Click(object sender, EventArgs e)
+		{
+			string value = comboBoxCourse.Text;
+			if (value == "")
+			{
+				MessageBox.Show("Enter Course To Be Added", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			}
+			else if (value != null)
+			{
+				dashboard.AddCourse(value);
+				MessageBox.Show("New Course Added", "Add Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				ReloadCombo();
+			}
+		}
+
+		private void btnRemoveCourse_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				string value = comboBoxCourse.Text;
+
+				if (value == "")
+				{
+					MessageBox.Show("Select Course To Delete", "Delete Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				}
+
+				//show a confirmation before deleting the student
+				else if (MessageBox.Show("Are You Sure You Want To Delete This Course", "Delete Course", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+				{
+					if (value != null)
+					{
+						dashboard.DeleteCourse(value);
+						MessageBox.Show("Course Deleted", "Delete Course", MessageBoxButtons.OK, MessageBoxIcon.Information);
+						ReloadCombo();
+
+					}
+					else
+					{
+						MessageBox.Show("Course Not Deleted", "Delete Course", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
+				}
+			}
+			catch
+			{
+				MessageBox.Show("Please Enter Existing Course", "Delete Course", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 	}

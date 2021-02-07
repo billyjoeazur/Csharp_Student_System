@@ -182,9 +182,24 @@ namespace Csharp_Student_System
 			fillGrid(new MySqlCommand("SELECT * FROM `college`"));
 
 			//add items in combobox course
-			comboBoxCourse.Items.Add("B.E.ED");
-			comboBoxCourse.Items.Add("B.SEC.ED");
-			comboBoxCourse.Items.Add("J.S.C");
+			try
+			{
+				string selectQuery = "SELECT * FROM `collegecourse`";
+				db.openConnection();
+				MySqlCommand command = new MySqlCommand(selectQuery, db.getConnection);
+				MySqlDataReader reader = command.ExecuteReader();
+				while (reader.Read())
+				{
+
+					comboBoxCourse.Items.Add(reader.GetString("val"));
+				}
+				db.closeConnection();
+			}
+			catch (Exception ex)
+			{
+
+				MessageBox.Show(ex.Message);
+			}
 
 			//add items in combobox year level
 			comboBoxYear.Items.Add("I");

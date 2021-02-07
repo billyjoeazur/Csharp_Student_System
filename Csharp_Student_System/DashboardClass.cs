@@ -194,5 +194,36 @@ namespace Csharp_Student_System
 				db.closeConnection();
 			}
 		}
+
+		public void DeleteCourse(string val)
+		{
+			MySqlCommand command = new MySqlCommand("DELETE FROM `collegecourse` WHERE `val` = @val", db.getConnection);
+			command.Parameters.Add("@val", MySqlDbType.VarChar).Value = val;
+			db.openConnection();
+			if (command.ExecuteNonQuery() == 1)
+			{
+				db.closeConnection();
+			}
+			else
+			{
+				db.closeConnection();
+			}
+		}
+
+		public void AddCourse(string val)
+		{
+			MySqlCommand command = new MySqlCommand("INSERT INTO `collegecourse`(`val`) VALUES (@val)", db.getConnection);
+			command.Parameters.Add("@val", MySqlDbType.VarChar).Value = val;
+			db.openConnection();
+			if (command.ExecuteNonQuery() == 1)
+			{
+				db.closeConnection();
+			}
+			else
+			{
+				db.closeConnection();
+			}
+		}
+
 	}
 }
