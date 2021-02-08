@@ -534,10 +534,11 @@ namespace Csharp_Student_System
 				MessageBox.Show("Empty Fields", "Edit Student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 			}
 		}
-
+		//Main mc = new Main();
 		private void pictureBox1_Click(object sender, EventArgs e)
 		{
 			this.Hide();
+			//mc.openChildForm(new MainChild());
 		}
 
 		private void SearchBox_Leave(object sender, EventArgs e)
